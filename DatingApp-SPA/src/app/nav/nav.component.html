@@ -14,6 +14,9 @@
         </ul>
 
         <div *ngIf="loggedIn()" class="btn-group dropdown" dropdown>
+            <span>
+                <img class="mr-2" src="{{photoUrl}}" alt="">
+            </span>
             <a dropdownToggle class="text-light dropdown-toggle" aria-controls="dropdown-basic">
         Welcome {{auth.decodedToken?.unique_name | titlecase}}
       </a>
