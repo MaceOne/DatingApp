@@ -31,6 +31,7 @@ import { AlertifyService } from 'src/app/_sevices/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { TimeagoModule } from 'ngx-timeago';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -58,6 +59,7 @@ export function tokenGetter() {
       ReactiveFormsModule,
       BsDropdownModule.forRoot(),
       BsDatepickerModule.forRoot(),
+      TimeagoModule.forRoot(),
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
