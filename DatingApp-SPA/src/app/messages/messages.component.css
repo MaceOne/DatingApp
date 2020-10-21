@@ -1,0 +1,12 @@
+table {
+    margin-top: 15px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.img-circle {
+    width: 45px;
+    margin-right: 5px;
+}

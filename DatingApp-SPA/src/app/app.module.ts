@@ -1,6 +1,9 @@
-import { ListsResolver } from './_resolvers/lists.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
+import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { ListsResolver } from './_resolvers/lists.resolver';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,14 +29,13 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { ListsComponent } from './lists/lists.component';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ErrorInterceptorProvider } from './_sevices/error.interceptor';
 import { AuthService } from './_sevices/auth.service';
 import { appRoutes } from './routes';
 import { AlertifyService } from 'src/app/_sevices/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
-import { MemberListResolver } from './_resolvers/member-list.resolver';
-import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { TimeagoModule } from 'ngx-timeago';
 
 export function tokenGetter() {
@@ -52,6 +54,7 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
+      MemberMessagesComponent,
       PhotoEditorComponent
    ],
    imports: [
@@ -86,7 +89,8 @@ export function tokenGetter() {
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      ListsResolver
+      ListsResolver,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
